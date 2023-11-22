@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="430.0" prefWidth="179.0" style="-fx-background-color: #333;">
+         <effect>
+            <DropShadow radius="10.7325" width="23.93" />
+         </effect>
+         <children>
+            <Button id="button_help" layoutX="6.0" layoutY="371.0" mnemonicParsing="false" onAction="#onClickMethod" prefHeight="51.0" prefWidth="168.0" style="-fx-background-color: #B22222;" text="HELP ME" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="178.0" prefHeight="77.0" prefWidth="425.0" style="-fx-background-color: #2151;">
+         <children>
+            <Text layoutX="140.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculator" wrappingWidth="144.6416015625">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button id="button_1" layoutX="201.0" layoutY="186.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="1" />
+      <Button id="button_2" layoutX="264.0" layoutY="186.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="2" />
+      <Button id="button_3" layoutX="328.0" layoutY="186.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="3" />
+      <Button id="button_4" layoutX="201.0" layoutY="249.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="4" />
+      <Button id="button_5" layoutX="264.0" layoutY="249.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="5" />
+      <Button id="button_6" layoutX="328.0" layoutY="249.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="6" />
+      <Button id="button_7" layoutX="201.0" layoutY="313.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="7" />
+      <Button id="button_8" layoutX="264.0" layoutY="313.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="8" />
+      <Button id="button_9" layoutX="328.0" layoutY="313.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="9" />
+      <Button id="button_plus" layoutX="403.0" layoutY="186.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="+" />
+      <Button id="button_minus" layoutX="466.0" layoutY="186.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="-" />
+      <Button id="button_blocked1" layoutX="530.0" layoutY="186.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="🔒" />
+      <Button id="button_ymn" layoutX="403.0" layoutY="249.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="x" />
+      <Button id="button_raz" layoutX="466.0" layoutY="249.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="/" />
+      <Button id="button_blocked2" layoutX="530.0" layoutY="249.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="🔒" />
+      <Button id="button_0" layoutX="264.0" layoutY="375.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="0" />
+      <Button id="button_blocked4" layoutX="403.0" layoutY="313.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="🔒" />
+      <Button id="button_blocked5" layoutX="466.0" layoutY="313.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="🔒" />
+      <Button id="button_blocked3" layoutX="530.0" layoutY="313.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="🔒" />
+      <Button id="button_equals" layoutX="466.0" layoutY="375.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="48.0" text="=" />
+   </children>
+</AnchorPane>
