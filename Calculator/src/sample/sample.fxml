@@ -6,29 +6,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="385.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #f4f4f4;" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button id="button_1" layoutX="16.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="1" />
-      <Button id="button_2" layoutX="75.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="2" />
-      <Button id="button_3" layoutX="134.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="3" />
-      <Button id="button_plus" layoutX="212.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="➕" />
-      <Button id="button_minus" layoutX="212.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="➖" />
-      <Button id="button_multiply" layoutX="212.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="✖" />
-      <Button id="button_4" layoutX="16.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="4" />
-      <Button id="button_5" layoutX="75.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="5" />
-      <Button id="button_6" layoutX="134.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="6" />
-      <Button id="button_7" layoutX="16.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="7" />
-      <Button id="button_8" layoutX="75.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="8" />
-      <Button id="button_9" layoutX="134.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="9" />
-      <Button id="button_dote" layoutX="16.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="." />
-      <Button id="button_0" layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="0" />
-      <Button id="button_equals" layoutX="134.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickEquals" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefHeight="59.0" prefWidth="59.0" text="=" />
-      <TextField fx:id="text_field" editable="false" layoutX="17.0" style="-fx-background-color: #f4f4f4;" layoutY="51.0" prefHeight="66.0" prefWidth="254.0" />
-      <Button id="button_divide" layoutX="212.0" layoutY="312.0" mnemonicParsing="false" prefHeight="59.0" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" prefWidth="59.0" text="➗" />
-      <Text layoutX="87.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CALCULATOR" wrappingWidth="114.62158203125">
+      <Button fx:id="button_1" layoutX="16.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="1" />
+      <Button fx:id="button_2" layoutX="75.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="2" />
+      <Button fx:id="button_3" layoutX="134.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="3" />
+      <Button fx:id="button_plus" layoutX="212.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="➕" />
+      <Button fx:id="button_minus" layoutX="212.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="➖" />
+      <Button fx:id="button_multiply" layoutX="212.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="✖" />
+      <Button fx:id="button_4" layoutX="16.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="4" />
+      <Button fx:id="button_5" layoutX="75.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="5" />
+      <Button fx:id="button_6" layoutX="134.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="6" />
+      <Button fx:id="button_7" layoutX="16.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="7" />
+      <Button fx:id="button_8" layoutX="75.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="8" />
+      <Button fx:id="button_9" layoutX="134.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="9" />
+      <Button fx:id="button_dote" layoutX="16.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="." />
+      <Button fx:id="button_0" layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="0" />
+      <Button fx:id="button_equals" layoutX="134.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickEquals" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="=" />
+      <TextField fx:id="text_field" editable="false" layoutX="17.0" layoutY="51.0" prefHeight="66.0" prefWidth="254.0" style="-fx-background-color: #f4f4f4;" />
+      <Button fx:id="button_divide" layoutX="212.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickMethod" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" prefHeight="59.0" prefWidth="59.0" style="-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;" text="➗" />
+      <Text fx:id="text_calculator" layoutX="87.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CALCULATOR" wrappingWidth="114.62158203125">
          <font>
             <Font size="19.0" />
          </font>
       </Text>
+      <Button fx:id="button_themes" mnemonicParsing="false" onAction="#onClickThemes" onMouseEntered="#onMouseInto" onMouseExited="#onMouseOut" style="-fx-background-color: #f4f4f4; -fx-border-color: #f4f4f4;" text="☾">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
