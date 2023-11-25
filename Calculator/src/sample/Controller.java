@@ -25,31 +25,25 @@ public class Controller {
         boolean count_id = false;
         for(int i = 0; i <= 9; i++){
             if(button.getId().equals("button_" + i)){
-                System.out.print(i);
-                text_field.setText(old_text + String.valueOf(i));
-                old_text = old_text + String.valueOf(i);
+                text_field.setText(old_text + i);
+                old_text = old_text + i;
                 count_id = true;
             }
         }
         if(!count_id) {
             if (button.getId().equals("button_plus")) {
-                System.out.print(" + ");
                 text_field.setText(old_text + "+");
                 old_text = old_text + " + ";
             } else if (button.getId().equals("button_minus")) {
-                System.out.print(" - ");
                 text_field.setText(old_text + "-");
                 old_text = old_text + " - ";
             } else if (button.getId().equals("button_multiply")) {
-                System.out.print(" x ");
                 text_field.setText(old_text + "•");
                 old_text = old_text + " • ";
             } else if (button.getId().equals("button_divide")) {
-                System.out.print(" / ");
                 text_field.setText(old_text + "/");
                 old_text = old_text + " / ";
             } else if (button.getId().equals("button_dote")) {
-                System.out.print(".");
                 text_field.setText(old_text + ".");
                 old_text = old_text + ".";
             }
@@ -70,12 +64,10 @@ public class Controller {
 
     @FXML
     public void onClickEquals(){
-        System.out.print(" ");
         text_field.setText(old_text + " ");
         old_text = old_text + " ";
 
-        double answer = Mathematics.Math(old_text);
-        System.out.println(answer);
+        double answer = Mathematics.Convert(old_text);
         text_field.setText(String.valueOf(answer));
     }
 }
