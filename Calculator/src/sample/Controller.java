@@ -61,6 +61,14 @@ public class Controller {
     public Button button_dote;
     @FXML
     public Button button_themes;
+    @FXML
+    public Button button_delete;
+    @FXML
+    public Button button_bracket_start;
+    @FXML
+    public Button button_bracket_end;
+    @FXML
+    public Button button_sqrt;
 
     @FXML
     public Text text_calculator;
@@ -104,6 +112,10 @@ public class Controller {
             button_multiply.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
             button_equals.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
             button_dote.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
+            button_bracket_start.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
+            button_bracket_end.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
+            button_sqrt.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
+            button_delete.setStyle("-fx-background-color: #5F9EA0; -fx-border-color: #f4f4f4;");
             text_field.setStyle("-fx-background-color: #f4f4f4; -fx-text-fill: #000000");
             anchor_pane.setStyle("-fx-background-color: #f4f4f4;");
             button_themes.setStyle("-fx-background-color: #f4f4f4; -fx-border-color: #f4f4f4;");
@@ -128,6 +140,10 @@ public class Controller {
             button_multiply.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
             button_equals.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
             button_dote.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
+            button_bracket_start.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
+            button_bracket_end.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
+            button_sqrt.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
+            button_delete.setStyle("-fx-background-color: #f97038e0; -fx-border-color: #2b2a2f;");
             text_field.setStyle("-fx-background-color: #2b2a2f; -fx-text-fill: #f4f4f4;");
             anchor_pane.setStyle("-fx-background-color: #2b2a2f;");
             button_themes.setStyle("-fx-background-color: #2b2a2f; -fx-border-color: #2b2a2f;");
@@ -149,20 +165,29 @@ public class Controller {
         }
         if(!count_id) {
             if (button.getId().equals("button_plus")) {
-                text_field.setText(old_text + "+");
+                text_field.setText(old_text + " + ");
                 old_text = old_text + " + ";
             } else if (button.getId().equals("button_minus")) {
-                text_field.setText(old_text + "-");
+                text_field.setText(old_text + " - ");
                 old_text = old_text + " - ";
             } else if (button.getId().equals("button_multiply")) {
-                text_field.setText(old_text + "•");
+                text_field.setText(old_text + " • ");
                 old_text = old_text + " • ";
             } else if (button.getId().equals("button_divide")) {
-                text_field.setText(old_text + "/");
+                text_field.setText(old_text + " / ");
                 old_text = old_text + " / ";
             } else if (button.getId().equals("button_dote")) {
                 text_field.setText(old_text + ".");
                 old_text = old_text + ".";
+            } else if (button.getId().equals("button_bracket_start")) {
+                text_field.setText(old_text + " ( ");
+                old_text = old_text + " ( ";
+            } else if (button.getId().equals("button_bracket_end")) {
+                text_field.setText(old_text + " ) ");
+                old_text = old_text + " ) ";
+            } else if (button.getId().equals("button_sqrt")) {
+                text_field.setText(old_text + " sqrt( ");
+                old_text = old_text + " sqrt( ";
             }
         }
     }
@@ -207,6 +232,12 @@ public class Controller {
                 button.setStyle("-fx-background-color: #2b2a2f; -fx-border-color: #2b2a2f;");
             }
         }
+    }
+
+    @FXML
+    public void onClickDelete(){
+        old_text = old_text.substring(0, old_text.length() - 1);
+        text_field.setText(old_text);
     }
 
     @FXML
