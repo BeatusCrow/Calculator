@@ -4,16 +4,13 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 
 import java.util.Objects;
-import java.util.Timer;
 
 
 public class Controller {
@@ -165,29 +162,29 @@ public class Controller {
         }
         if(!count_id) {
             if (button.getId().equals("button_plus")) {
-                text_field.setText(old_text + " + ");
-                old_text = old_text + " + ";
+                text_field.setText(old_text + "+");
+                old_text = old_text + "+";
             } else if (button.getId().equals("button_minus")) {
-                text_field.setText(old_text + " - ");
-                old_text = old_text + " - ";
+                text_field.setText(old_text + "-");
+                old_text = old_text + "-";
             } else if (button.getId().equals("button_multiply")) {
-                text_field.setText(old_text + " • ");
-                old_text = old_text + " • ";
+                text_field.setText(old_text + "•");
+                old_text = old_text + "•";
             } else if (button.getId().equals("button_divide")) {
-                text_field.setText(old_text + " / ");
-                old_text = old_text + " / ";
+                text_field.setText(old_text + "/");
+                old_text = old_text + "/";
             } else if (button.getId().equals("button_dote")) {
                 text_field.setText(old_text + ".");
                 old_text = old_text + ".";
             } else if (button.getId().equals("button_bracket_start")) {
-                text_field.setText(old_text + " ( ");
-                old_text = old_text + " ( ";
+                text_field.setText(old_text + "(");
+                old_text = old_text + "(";
             } else if (button.getId().equals("button_bracket_end")) {
-                text_field.setText(old_text + " ) ");
-                old_text = old_text + " ) ";
+                text_field.setText(old_text + ")");
+                old_text = old_text + ")";
             } else if (button.getId().equals("button_sqrt")) {
-                text_field.setText(old_text + " sqrt( ");
-                old_text = old_text + " sqrt( ";
+                text_field.setText(old_text + "sqrt(");
+                old_text = old_text + "sqrt(";
             }
         }
     }
